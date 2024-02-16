@@ -16,7 +16,7 @@
     <header class="primary-header">
       <div class="container">
         <a href="#"><img src="src/images/logo.svg" alt="Manage" /></a>
-        <nav class="primary-navigation">
+        <nav class="primary-navigation" aria-label="primary">
           <ul role="list" class="nav-list">
             <li><a href="#">Pricing</a></li>
             <li><a href="#">Products</a></li>
@@ -118,11 +118,40 @@
         </div>
       </section>
     </main>
-    <footer class="bg-primary-dark-blue.text-neutral-creamy">
+    <footer class="bg-primary-dark-blue text-neutral-creamy">
       <div class="container">
-        <div></div>
-        <div></div>
-        <div></div>
+        <div>
+          <a href="#"><img src="./src/images/logo.svg" alt="Manage" /></a>
+        </div>
+        <div>
+          <ul role="list" aria-label="social links">
+            <li><a aria-label="facebook" href="#"></a></li>
+            <li><a aria-label="Youtube" href="#"></a></li>
+            <li><a aria-label="X" href="#"></a></li>
+            <li><a aria-label="Pinterest" href="#"></a></li>
+            <li><a aria-label="Instagram" href="#"></a></li>
+          </ul>
+        </div>
+        <div>
+          <nav class="footer-nav">
+            <ul arial-label="footer" role="list">
+              <li><a href="">#</a>Home</li>
+              <li><a href="">#</a>Pricing</li>
+              <li><a href="">#</a>Products</li>
+              <li><a href="">#</a>About Us</li>
+              <li><a href="">#</a>Careers</li>
+              <li><a href="">#</a>Community</li>
+              <li><a href="">#</a>Privacy Policy</li>
+            </ul>
+          </nav>
+        </div>
+        <div>
+          <form action="">
+            <input type="email" />
+            <button class="button">Go</button>
+          </form>
+          <p>Copyright 2024. All Rights Reserved</p>
+        </div>
       </div>
     </footer>
   </body>
