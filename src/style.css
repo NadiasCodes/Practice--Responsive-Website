@@ -1,0 +1,188 @@
+:root {
+  --clr-primary-light-blue: hsl(231, 77%, 90%);
+  --clr-primary--dark-blue: hsl(230, 35%, 7%);
+
+  --clr-neutral-dark-grayish-blue: hsl(227, 12%, 61%);
+  -clr-neutral-creamy: hsl(12, 100%, 96%);
+
+  --ff-primary: "Be Vietnam Pro", sans-serif;
+
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+
+  --fs-13: 13px;
+  --fs-14: 14px;
+  --fs-15: 15px;
+  --fs-16: 16px;
+  --fs-30: 30px;
+  --fs-40: 40px;
+  --fs-56: 56px;
+  --fs-body: var(--fs-14);
+  --fs-nav: var(--fs-16);
+  --fs-button: var(--fs-13);
+  --fs-primary-heading: var(--fs-40);
+  --fs-secondary-heading: var(--fs-30);
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-body: var(--fs-16);
+    --fs-nav: var(--fs-13);
+    --fs-primary-heading: var(--fs-30);
+    --fs-secondary-heading: var(--fs-56);
+  }
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin & padding in favour of better control in authored CSS */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+html,
+body {
+  height: 100%;
+}
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utility Classes */
+
+.text-primary-light-blue {
+  color: var(--clr-primary-light-blue);
+}
+.text-primary-dark-blue {
+  color: var(--clr-primary-dark-blue);
+}
+.text-neutral-dark-grayish-blue {
+  color: var(--clr-neutral-dark-grayish-blue);
+}
+.text-neutral-creamy {
+  background-color: var(-clr-neutral-creamy);
+}
+.bg-primary-light-blue {
+  background-color: var(--clr-primary-light-blue);
+}
+.bg-primary-dark-blue {
+  background-color: var(--clr-primary-dark-blue);
+}
+.bg-neutral-dark-grayish-blue {
+  background-color: var(--clr-neutral-dark-grayish-blue);
+}
+.bg-neutral-creamy {
+  background-color: var(-clr-neutral-creamy);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+.fw-semi-bold {
+  font-weight: var(--fw-semi-bold);
+}
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fs-primary-heading {
+  font-size: var(--fs-primary-heading);
+}
+.fs-secondary-heading {
+  font-size: var(--fs-secondary-heading);
+}
+
+.fs-13 {
+  font-size: var(--fs-13);
+}
+.fs-14 {
+  font-size: var(--fs-14);
+}
+
+.fs-15 {
+  font-size: var(--fs-15);
+}
+.fs-16 {
+  font-size: var(--fs-16);
+}
