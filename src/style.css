@@ -32,8 +32,8 @@
   :root {
     --fs-body: var(--fs-16);
     --fs-nav: var(--fs-13);
-    --fs-primary-heading: var(--fs-30);
-    --fs-secondary-heading: var(--fs-56);
+    --fs-primary-heading: var(--fs-56);
+    --fs-secondary-heading: var(--fs-40);
   }
 }
 
