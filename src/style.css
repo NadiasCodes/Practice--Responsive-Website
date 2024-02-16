@@ -1,6 +1,6 @@
 :root {
   --clr-primary-light-blue: hsl(231, 77%, 90%);
-  --clr-primary-dark-blue: hsl(230, 35%, 7%);
+  --clr-primary-dark-blue: hsl(228, 39%, 23%);
 
   --clr-neutral-dark-grayish-blue: hsl(227, 12%, 61%);
   --clr-neutral-creamy: hsl(12, 100%, 96%);
@@ -185,4 +185,20 @@ textarea:not([rows]) {
 }
 .fs-16 {
   font-size: var(--fs-16);
+}
+
+/* general styling */
+
+body {
+  font-size: var(--fs-body);
+  font-family: var(--ff-body);
+  color: var(--clr-primary-dark-blue);
+}
+
+.container {
+  --max-width: 1110px;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
 }
