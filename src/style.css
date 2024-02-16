@@ -1,9 +1,9 @@
 :root {
   --clr-primary-light-blue: hsl(231, 77%, 90%);
-  --clr-primary--dark-blue: hsl(230, 35%, 7%);
+  --clr-primary-dark-blue: hsl(230, 35%, 7%);
 
   --clr-neutral-dark-grayish-blue: hsl(227, 12%, 61%);
-  -clr-neutral-creamy: hsl(12, 100%, 96%);
+  --clr-neutral-creamy: hsl(12, 100%, 96%);
 
   --ff-primary: "Be Vietnam Pro", sans-serif;
 
@@ -141,7 +141,7 @@ textarea:not([rows]) {
   color: var(--clr-neutral-dark-grayish-blue);
 }
 .text-neutral-creamy {
-  background-color: var(-clr-neutral-creamy);
+  color: var(--clr-neutral-creamy);
 }
 .bg-primary-light-blue {
   background-color: var(--clr-primary-light-blue);
