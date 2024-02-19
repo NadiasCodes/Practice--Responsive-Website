@@ -142,24 +142,18 @@ body {
   color: var(--clr-primary-dark-blue);
 }
 
-.container {
-  --max-width: 1110px;
-  --padding: 1rem;
-
-  width: min(var(--max-width), 100% - (var(--padding) * 2));
-  margin-inline: auto;
+p:not([class]) {
+  opacity: 0.5;
+  max-width: 450px;
 }
+
+p[data-width="wide"]{max-width: 100%;}
 
 .padding-block-xxxL {
   padding-block: var(--size-xxxL);
 }
 .padding-block-s {
   padding-block: var(--size-s);
-}
-
-.even-columns {
-  display: grid;
-  gap: 16px;
 }
 
 .button {
@@ -237,6 +231,23 @@ body {
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
+}
+
+.container {
+  --max-width: 1110px;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+.even-columns {
+  display: grid;
+  gap: 16px;
+}
+
+:where(.flow :not(:first-child)) {
+  margin-top: var(--flow-spacer, 32px);
 }
 
 .text-primary-light-blue {
