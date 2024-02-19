@@ -1,8 +1,11 @@
 :root {
   --clr-primary-light-blue: hsl(231, 77%, 90%);
   --clr-primary-dark-blue: hsl(228, 39%, 23%);
+  --clr-primary-shadow-color: hsl(227, 17%, 35%);
+  --clr-primary-button-color: hsl(228, 32%, 17%);
 
   --clr-neutral-dark-grayish-blue: hsl(227, 12%, 61%);
+
   --clr-neutral-creamy: hsl(12, 100%, 96%);
 
   --ff-primary: "Be Vietnam Pro", sans-serif;
@@ -26,15 +29,16 @@
   --fs-button: var(--fs-13);
   --fs-primary-heading: var(--fs-40);
   --fs-secondary-heading: var(--fs-30);
-}
 
-@media (min-width: 800px) {
-  :root {
-    --fs-body: var(--fs-16);
-    --fs-nav: var(--fs-13);
-    --fs-primary-heading: var(--fs-56);
-    --fs-secondary-heading: var(--fs-40);
-  }
+  --size-xxxs: 4px;
+  --size-xxs: 8px;
+  --size-xs: 12px;
+  --size-s: 16px;
+  --size-m: 24px;
+  --size-L: 32px;
+  --size-xL: 48px;
+  --size-xxL: 64px;
+  --size-xxxL: 80px;
 }
 
 /* Box sizing rules */
@@ -168,9 +172,11 @@ textarea:not([rows]) {
 
 .fs-primary-heading {
   font-size: var(--fs-primary-heading);
+  line-height: 1.2;
 }
 .fs-secondary-heading {
   font-size: var(--fs-secondary-heading);
+  line-height: 1.2;
 }
 
 .fs-13 {
@@ -201,4 +207,60 @@ body {
 
   width: min(var(--max-width), 100% - (var(--padding) * 2));
   margin-inline: auto;
+}
+
+.padding-block-xxxL {
+  padding-block: var(--size-xxxL);
+}
+.padding-block-s {
+  padding-block: var(--size-s);
+}
+
+.even-columns {
+  display: grid;
+  gap: 16px;
+}
+
+.button {
+  border-radius: 20px;
+  padding: 18px 40px;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-button);
+  border: none;
+  line-height: 1;
+  color: var(--clr-neutral-creamy);
+  background-color: var(--clr-primary-button-color);
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 1.125em 1em -1em var(--clr-primary-shadow-color);
+}
+
+.button:hover,
+.button:focus-visible {
+  background-color: var(--clr-neutral-dark-grayish-blue);
+}
+
+.button[data-type="inverted"] {
+  background-color: var(--clr-neutral-creamy);
+  color: var(--clr-primary-button-color);
+}
+
+.button[data-type="inverted"]:hover,
+.button[data-type="inverted"]:focus-visible {
+  background-color: var(--clr-neutral-dark-grayish-blue);
+  color: var(--clr-neutral-creamy);
+}
+
+@media (min-width: 50em) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+
+  :root {
+    --fs-body: var(--fs-16);
+    --fs-nav: var(--fs-13);
+    --fs-primary-heading: var(--fs-56);
+    --fs-secondary-heading: var(--fs-40);
+  }
 }
