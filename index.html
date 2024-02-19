@@ -15,17 +15,35 @@
   <body>
     <header class="primary-header">
       <div class="container">
-        <a href="#"><img src="src/images/logo.svg" alt="Manage" /></a>
-        <nav class="primary-navigation" aria-label="primary">
-          <ul role="list" class="nav-list">
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Carreers</a></li>
-            <li><a href="#">Community</a></li>
-          </ul>
-        </nav>
-        <button class="button">Get started</button>
+        <div class="nav-wrapper">
+          <a href="#"><img src="src/images/logo.svg" alt="Manage" /></a>
+          <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <img
+              class="icon-hamburger"
+              src="src/images/icon-hamburger.svg"
+              alt=""
+              area-hidden="true"
+            />
+            <img
+              class="icon-close"
+              src="src/images/icon-close.svg"
+              alt=""
+              area-hidden="true"
+            />
+            <span class="visually-hidden">Menu</span>
+          </button>
+
+          <nav class="primary-navigation" aria-label="primary" id="primary-navigation">
+            <ul role="list" class="nav-list" >
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Carreers</a></li>
+              <li><a href="#">Community</a></li>
+            </ul>
+          </nav>
+          <button class="button" style="display:none" >Get started</button>
+        </div>
       </div>
     </header>
 
@@ -103,7 +121,9 @@
         <button class="button">Get Started</button>
       </section>
 
-      <section class="bg-primary-light-blue text-neutral-creamy padding-block-xxxL">
+      <section
+        class="bg-primary-light-blue text-neutral-creamy padding-block-xxxL"
+      >
         <div class="container">
           <div class="event-columns">
             <div>
@@ -154,5 +174,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="src/data.js"></script>
   </body>
 </html>
