@@ -147,7 +147,9 @@ p:not([class]) {
   max-width: 450px;
 }
 
-p[data-width="wide"]{max-width: 100%;}
+p[data-width="wide"] {
+  max-width: 100%;
+}
 
 .padding-block-xxxL {
   padding-block: var(--size-xxxL);
@@ -218,6 +220,25 @@ p[data-width="wide"]{max-width: 100%;}
 .nav-list a:focus {
   color: var(--clr-neutral-dark-grayish-blue);
 }
+
+/* cta */
+.cta {
+  position: relative;
+  isolation: isolate;
+  text-align: center;
+}
+.cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url("images/bg-tablet-pattern.svg"),
+    url("images/bg-tablet-pattern.svg");
+  opacity: 0.2;
+  background-repeat: no-repeat;
+  background-position: -240px -80px, 1600px -630px;
+}
+
 /* Utility Classes */
 
 .visually-hidden {
@@ -244,6 +265,13 @@ p[data-width="wide"]{max-width: 100%;}
 .even-columns {
   display: grid;
   gap: 16px;
+}
+
+.get-started-push-right {
+  margin: 0 auto;
+}
+.vertical-align-items {
+  align-items: center;
 }
 
 :where(.flow :not(:first-child)) {
@@ -371,5 +399,13 @@ p[data-width="wide"]{max-width: 100%;}
   }
   .display-md-inline-flex {
     display: inline-flex;
+  }
+
+  .cta {
+    text-align: left;
+  }
+
+  .get-started-push-right-md {
+    margin-left:  auto;
   }
 }
